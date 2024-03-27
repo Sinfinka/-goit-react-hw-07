@@ -12,7 +12,7 @@ const SignupSchema = Yup.object().shape({
     .max(50, "Too Long!")
     .required("Required"),
   number: Yup.string()
-    .matches(/^\d{3}-\d{2}-\d{2}$/, "Invalid phone number format")
+    .matches(/^\d{3}-\d{3}-\d{4}$/, "Invalid phone number format")
     .min(3, "Too Short!")
     .max(50, "Too Long!")
     .required("Required"),
@@ -56,7 +56,7 @@ function ContactForm() {
             type="text"
             name="number"
             id={numberFieldId}
-            placeholder="xxx-xx-xx"
+            placeholder="xxx-xxx-xxxx"
           />
           <span className={css.error}>
             <ErrorMessage
