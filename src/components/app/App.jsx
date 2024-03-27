@@ -8,6 +8,7 @@ import { fetchContacts } from "../../redux/contactsOps";
 import { selectError, selectLoading } from "../../redux/contactsSlice";
 import Loader from "../Loader/Loader";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
+import toast, { Toaster } from "react-hot-toast";
 
 function App() {
   const dispatch = useDispatch();
@@ -15,7 +16,11 @@ function App() {
   const error = useSelector(selectError);
 
   useEffect(() => {
-    dispatch(fetchContacts());
+    dispatch(fetchContacts())
+      .unwrap()
+      .catch(() => {
+        toast.error("Fetch rejected");
+      });
   }, [dispatch]);
 
   return (
@@ -29,6 +34,7 @@ function App() {
         <ContactList />
         {loading && !error && <Loader />}
         {error && <ErrorMessage />}
+        <Toaster />
       </div>
     </div>
   );
