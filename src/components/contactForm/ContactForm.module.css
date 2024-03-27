@@ -1,0 +1,39 @@
+.form {
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+
+  width: 350px;
+  background-color: rgb(230, 230, 230);
+  border: 1px solid black;
+  border-radius: 8px;
+  box-shadow: 5px 5px 4px rgba(109, 109, 109, 0.5);
+  font-size: 36px;
+  text-shadow: none;
+  padding: 20px 20px 40px 20px;
+}
+
+.field {
+  height: 40px;
+  font-size: 24px;
+  background-color: rgb(109, 109, 109, 0.5);
+  border-radius: 8px;
+  padding: 5px 10px;
+}
+.field::placeholder {
+  color: rgb(230, 230, 230);
+}
+
+.error {
+  height: 30px;
+  font-size: 18px;
+  color: chocolate;
+}
+
+.btn {
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: rgb(72, 67, 67);
+}

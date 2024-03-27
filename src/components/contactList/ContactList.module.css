@@ -1,0 +1,13 @@
+.contactList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.contactItem {
+  display: grid;
+  background-color: rgb(230, 230, 230);
+  border: 1px solid black;
+  border-radius: 8px;
+  box-shadow: 5px 5px 4px rgba(109, 109, 109, 0.5);
+  padding: 10px;
+}

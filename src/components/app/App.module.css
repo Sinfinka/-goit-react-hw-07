@@ -1,0 +1,25 @@
+.conteiner {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  max-width: 1280px;
+  /* height: 800px; */
+  background-color: rgb(206, 206, 206);
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.header {
+  text-align: left;
+  font-size: 36px;
+  text-shadow: 5px 5px 4px rgba(109, 109, 109, 0.5);
+}
+
+h1 {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.contacts {
+  text-align: center;
+}

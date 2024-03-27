@@ -1,0 +1,14 @@
+.wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: left;
+  font-size: 20px;
+}
+
+.btn {
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: rgb(72, 67, 67);
+}
